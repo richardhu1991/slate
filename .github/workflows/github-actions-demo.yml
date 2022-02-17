@@ -29,7 +29,7 @@ jobs:
         with:
           who-to-greet: 'changyi be happy'
       - name: check process
-        run: ps -aux
+        run: ps -ef
       - name: check docker containers
         run: docker ps -a
       - name: check
