@@ -16,6 +16,7 @@ jobs:
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
   My-Job:
+    runs-on: ubuntu-latest
     steps:
       - name: Hello world action step
         id: hello
@@ -24,4 +25,3 @@ jobs:
           who-to-greet: 'changyi be happy'
       - name: Run command
         run: ps -aux
-      
