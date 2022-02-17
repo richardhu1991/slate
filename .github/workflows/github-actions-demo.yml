@@ -17,6 +17,7 @@ jobs:
       - run: echo "🍏 This job's status is ${{ job.status }}."
   My-Job:
     runs-on: ubuntu-latest
+    container: registry.cn-beijing.aliyuncs.com/aone-build/aone-build-engine-test01:0.0.2
     steps:
       - name: prepare
         run: |
