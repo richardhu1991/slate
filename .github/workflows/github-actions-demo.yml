@@ -15,3 +15,13 @@ jobs:
         run: |
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
+  My-Job:
+    steps:
+      - name: Hello world action step
+        id: hello
+        uses: actions/hello-world-docker-action@master
+        with:
+          who-to-greet: 'changyi be happy'
+      - name: Run command
+        run: ps -aux
+      
