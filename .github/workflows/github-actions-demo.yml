@@ -18,10 +18,20 @@ jobs:
   My-Job:
     runs-on: ubuntu-latest
     steps:
+      - name: prepare
+        run: |
+          pwd
+          touch sample.txt
       - name: Hello world action step
         id: hello
         uses: actions/hello-world-docker-action@master
         with:
           who-to-greet: 'changyi be happy'
-      - name: Run command
+      - name: check process
         run: ps -aux
+      - name: check docker containers
+        run: docker ps -a
+      - name: check
+        run: |
+          pwd
+          ls -al
